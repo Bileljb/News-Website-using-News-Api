@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px 70px;
+    background-color: #15191b;
+}
+
+.navbar {
+    background-color: #323c3f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 7px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+
+.logo a {
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+}
+
+.search-inp {
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+}
+
+.search-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    transition: 0.3s ease-in-out;
+    background-color: white;
+}
+
+.search-btn:hover {
+    cursor: pointer;
+    background-color: blue;
+}
+
+.container {
+    width: 100%;
+    height: 1000px;
+    background-color: #323c3f;
+    border-radius: 7px;
+}
+
+.card-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 10px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 30em;
+    overflow: hidden;
+    border-radius: 7px;
+    background: rgb(37, 35, 35);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    z-index: 0;
+}
+
+.card:hover .overlay {
+    background: rgba(74, 100, 114, 0.8);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.7s;
+    background: rgba(74, 100, 114, 0.3);
+    z-index: 1;
+}
+
+.card .title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 40px 20px;
+    color: rgb(255, 252, 252);
+    z-index: 9999;
+}
+
+.card:hover .title {
+    display: block;
+}
+
+.card:hover .description {
+    display: block;
+    font-weight: 500;
+    margin: 40px 20px;
+    color: rgb(255, 252, 252);
+}
+.card:hover .author{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: aliceblue;
+}
+.card:hover .author::before{
+    content: "Author: ";
+}
+.card .author,
+.description,
+.title {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.filtred_results_container {
+    background-color: white;
+    margin-top: 20px;
+    height: auto;
+    width: 400px;
+    padding: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 7px;
+    display: none;
+    z-index: 999;
+}
+
+.result img {
+    height: 60px;
+    width: 80px;
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+    border: solid black 0.5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
